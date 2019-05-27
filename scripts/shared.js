@@ -6,6 +6,8 @@ var blackList = [
 	'prosport.bg',
 	'www.prosport.bg',
 	'redpride.eu',
-	'www.redpride.eu'
+    'www.redpride.eu',
+    'gong.bg',
+    'www.gong.bg'
 ];
 
