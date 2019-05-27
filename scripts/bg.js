@@ -5,6 +5,10 @@ for (var i in blackList) {
   selectors.push(selector);
 }
 
+function checkURLIsImage(url) {
+    return (url.split(/[?#]/)[0].match(/\.(jpeg|jpg|gif|png)$/) != null);
+}
+
 (function(urls) {
 
     var tabsManager = {
@@ -64,7 +68,11 @@ for (var i in blackList) {
     });
 		
 	chrome.webRequest.onBeforeRequest.addListener(
-		function(details) {
+        function (details) {
+            if (checkURLIsImage(details.url)) {
+                return;
+            }
+
 			chrome.tabs.update(details.tabId, {url: 'https://cskawebguardian.github.io/' });	  
 		},
 		{urls: urls},
