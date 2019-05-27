@@ -3,7 +3,7 @@
     "manifest_version": 2,
     "name": "CSKA Sofia Web Guardian",
     "description": "Премахва резултати в Google от враждебни към ЦСКА сайтове; блокира достъпа до тях и пренасочва към официалния сайт на клуба.",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "background": {
         "scripts": [ "scripts/shared.js","scripts/bg.js" ], 
         "persistent": true
